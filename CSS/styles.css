@@ -1,0 +1,440 @@
+/* CSS Browser Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* imported google font */
+/* @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+body {
+  font-family: "Urbanist", sans-serif;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.home {
+  height: 100vh;
+  /* background-image: url("../images/background.jpg"); */
+  background-color: rgba(128, 0, 128, 0.688);
+}
+.home .logo {
+  display: flex;
+  align-items: center;
+}
+.home .logo h2 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #fff;
+  letter-spacing: 0.5rem;
+}
+
+.zuri-logo {
+  height: 2.5rem;
+  margin-left: 1rem;
+}
+
+.home header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+
+.home header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.home header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+.home header nav ul li {
+  display: flex;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  /* color: #7c3238; */
+  font-weight: 400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  margin-right: 1.5rem;
+  padding-bottom: 0.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a::after {
+  position: absolute;
+  content: "";
+  height: 0.15rem;
+  width: 0;
+  left: 30%;
+  right: 30%;
+  bottom: -0.2rem;
+  background: white;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+nav ul li a.active::after {
+  width: 30%;
+}
+nav ul li a.active:hover::after {
+  width: 100%;
+}
+
+.home .me {
+  /* border: 1px solid white; */
+  width: 50%;
+  margin: 3.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .me .my-photo {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  border: 0.8rem solid rgb(59, 2, 52);
+  overflow: hidden;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.home .me h3 {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  color: white;
+  text-shadow: 1px 1px 1px #eee;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.home .me h5 {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: white;
+}
+
+.social-media-icons {
+  /* border: 1px solid white; */
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 4rem;
+  margin-top: 1rem;
+}
+.social-media-icons svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.social-media-icons a {
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-media-icons a:hover {
+  opacity: 1;
+  transform: translateY(0.5rem);
+}
+
+.social-media-icons svg.twitter {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* About me stylings */
+.about-me {
+  padding: 4rem;
+}
+.abt {
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 0.3rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+.about-me .first-half {
+  display: flex;
+}
+
+.about-me .first-half h1 {
+  text-orientation: sideways-right;
+  font-size: 3.5rem;
+  letter-spacing: 1rem;
+  writing-mode: vertical-rl;
+  opacity: 0.4;
+  margin-right: 2rem;
+  color: gray;
+}
+.about-me-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me-content .my-photo {
+  width: 10rem;
+  height: 10rem;
+  border: 0.3rem solid rgba(128, 0, 128, 0.688);
+  overflow: hidden;
+  object-fit: cover;
+  transform: rotateZ(4deg);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  display: grid;
+  align-self: center;
+}
+.about-me-content .my-photo:hover {
+  transform: rotateZ(0deg);
+}
+.about-me-content h2 {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: rgba(128, 0, 128, 1);
+}
+
+.about-me-content h5 {
+  color: gray;
+
+  margin-bottom: 2rem;
+}
+
+.about-me .second-half {
+  padding: 0 4rem;
+}
+.about-me .second-half .card {
+  background: rgb(236, 234, 234);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem;
+}
+.about-me .second-half h3 {
+  margin-bottom: 0.5rem;
+  color: rgba(128, 0, 128, 1);
+}
+.about-me .second-half ul {
+  list-style: none;
+}
+
+.about-me .second-half ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  align-items: center;
+}
+
+.about-me .second-half .personal-details ul li span:nth-child(1) {
+  font-weight: bolder;
+}
+
+.technical-skill div {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.technical-skill div p {
+  margin-bottom: 0.2rem;
+}
+
+/* contact */
+.contact-me {
+  padding: 2rem 4rem;
+  background: rosybrown;
+}
+
+#contact-info {
+  position: relative;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-icons svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.contact-icons svg path {
+  stroke: rgba(128, 0, 128, 0.688);
+}
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+  padding: 0 10rem;
+  justify-content: space-between;
+}
+.cicon,
+.cicon div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form h4 {
+  margin-top: 5rem;
+}
+
+.form form {
+  margin: 0 auto;
+  width: 50%;
+}
+
+form .input-group {
+  display: flex;
+  flex-direction: column;
+}
+form .input-group label {
+  margin: 1rem 0;
+  color: #eeeeee;
+}
+
+form .input-group input,
+form .input-group textarea {
+  outline: none;
+  border: none;
+  background: #eeeeee;
+  padding: 0.65rem 1rem;
+  border-radius: 0.2rem;
+}
+
+form .input-group textarea {
+  margin-top: 2rem;
+  display: block;
+  height: 30vh;
+}
+
+form button {
+  padding: 0.6rem 1.5rem;
+  margin-top: 1.2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: all 0.25s linear;
+}
+
+form button:hover {
+  background-color: #379392;
+  color: #eeeeee;
+}
+
+.hamburger {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+}
+
+.hamburger svg {
+  width: 2rem;
+  height: 2rem;
+}
+/* responsiveness */
+@media screen and (max-width: 768px) {
+  nav {
+    /* display: none; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rosybrown;
+    padding: 1rem;
+    border-radius: 0 0 0.5rem;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav.show {
+    transform: translateX(0);
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin-bottom: 0.5rem;
+  }
+  .hamburger {
+    display: block;
+  }
+  .logo {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+  }
+  .home .logo h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .zuri-logo {
+    height: 1.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .social-media-icons {
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
+  .about-me {
+    padding: 0.5rem;
+  }
+  .abt {
+    padding: 2rem 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .about-me .first-half {
+    margin-bottom: 2rem;
+  }
+  .about-me .first-half h1 {
+    font-size: 1.5rem;
+    color: gray;
+  }
+  .about-me .second-half {
+    padding: 1rem;
+  }
+
+  .contact-me {
+    padding: 1rem;
+  }
+
+  #contact-info {
+    font-size: 1.3rem;
+  }
+
+  .contact-icons {
+    padding: 0 1rem;
+    flex-direction: column;
+  }
+  .cicon {
+    margin-bottom: 2rem;
+  }
+
+  .form form {
+    width: 100%;
+  }
+}
